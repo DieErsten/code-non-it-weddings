@@ -1,0 +1,1874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Code Non IT Weddings – Luxury Indian Wedding Planners</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f5f3ff;
+      --bg-alt: #ffffff;
+      --bg-soft: #eee9ff;
+      --text: #151325;
+      --muted: #5c5a72;
+      --accent: #b86bff;
+      --accent-soft: rgba(184, 107, 255, 0.12);
+      --accent-strong: #8b46d2;
+      --card: rgba(255, 255, 255, 0.92);
+      --border-subtle: rgba(15, 23, 42, 0.08);
+      --shadow-soft: 0 22px 45px rgba(15, 23, 42, 0.18);
+      --radius-xl: 24px;
+      --radius-full: 999px;
+      --nav-height: 80px;
+      --transition-fast: 180ms ease-out;
+      --transition-slow: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    :root.dark {
+      --bg: #050513;
+      --bg-alt: #070719;
+      --bg-soft: #111129;
+      --text: #f9f5ff;
+      --muted: #b3b0d4;
+      --accent: #f97316;
+      --accent-soft: rgba(249, 115, 22, 0.16);
+      --accent-strong: #fb923c;
+      --card: rgba(15, 23, 42, 0.98);
+      --border-subtle: rgba(148, 163, 184, 0.25);
+      --shadow-soft: 0 32px 80px rgba(0, 0, 0, 0.6);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(120% 120% at 0% 0%, #fdf2ff 0, transparent 55%),
+        radial-gradient(140% 140% at 100% 0%, #e0ecff 0, transparent 60%),
+        radial-gradient(130% 130% at 50% 100%, #ffe7f0 0, transparent 55%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    :root.dark body {
+      background:
+        radial-gradient(140% 140% at 0% 0%, #1e1635 0, transparent 55%),
+        radial-gradient(130% 130% at 100% 0%, #111827 0, transparent 60%),
+        radial-gradient(120% 120% at 50% 100%, #4c1d95 0, transparent 55%),
+        var(--bg);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(16px);
+    }
+
+    /* HEADER / NAV */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(20px);
+      background: linear-gradient(to bottom,
+        rgba(245, 243, 255, 0.98),
+        rgba(245, 243, 255, 0.88),
+        transparent
+      );
+      border-bottom: 1px solid rgba(148, 163, 184, 0.22);
+    }
+    :root.dark header {
+      background: linear-gradient(to bottom,
+        rgba(5, 5, 19, 0.98),
+        rgba(5, 5, 19, 0.9),
+        transparent
+      );
+    }
+
+    .nav {
+      height: var(--nav-height);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      white-space: nowrap;
+    }
+    .brand-name {
+      font-family: "Playfair Display", serif;
+      font-size: 1.35rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .brand-tagline {
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.4rem;
+      font-size: 0.92rem;
+    }
+    nav a {
+      position: relative;
+      padding: 0.25rem 0;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+      transition: width var(--transition-fast), box-shadow var(--transition-fast);
+    }
+    nav a:hover::after {
+      width: 100%;
+      box-shadow: 0 0 16px rgba(148, 27, 195, 0.6);
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      border-radius: var(--radius-full);
+      border: none;
+      padding: 0.6rem 1.4rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        background var(--transition-fast),
+        color var(--transition-fast),
+        filter var(--transition-fast);
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background-image: linear-gradient(120deg, var(--accent), var(--accent-strong));
+      color: white;
+      box-shadow: 0 18px 40px rgba(148, 27, 195, 0.45);
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px) translateZ(0) scale(1.02);
+      box-shadow:
+        0 0 24px rgba(184, 107, 255, 0.85),
+        0 22px 50px rgba(148, 27, 195, 0.65);
+      filter: brightness(1.03);
+    }
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid var(--border-subtle);
+      color: var(--muted);
+    }
+    .btn-ghost:hover {
+      background: var(--accent-soft);
+      color: var(--text);
+      box-shadow: 0 0 18px rgba(184, 107, 255, 0.6);
+      transform: translateY(-1px);
+    }
+
+    /* Sun / Moon theme toggle */
+    .theme-toggle {
+      width: 54px;
+      height: 28px;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      background: #020617;
+      position: relative;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3px 6px;
+      box-shadow: inset 0 0 0 1px rgba(15,23,42,0.65);
+      transition: background var(--transition-slow), box-shadow var(--transition-slow), border var(--transition-fast), filter var(--transition-fast);
+    }
+    :root.dark .theme-toggle {
+      background: linear-gradient(135deg, #0b1120, #020617);
+      box-shadow: inset 0 0 0 1px rgba(148,163,184,0.6);
+    }
+    .theme-toggle:hover {
+      box-shadow:
+        0 0 14px rgba(251, 191, 36, 0.5),
+        inset 0 0 0 1px rgba(148,163,184,0.8);
+      filter: brightness(1.05);
+    }
+    .theme-toggle-knob {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      background: #f9fafb;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.55);
+      transform: translateX(0);
+      transition: transform var(--transition-slow), background var(--transition-fast), box-shadow var(--transition-fast);
+      top: 3px;
+      left: 4px;
+    }
+    :root.dark .theme-toggle-knob {
+      transform: translateX(22px);
+      background: #0f172a;
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.6);
+    }
+    .theme-toggle-icon {
+      font-size: 0.9rem;
+      opacity: 0.38;
+      transition: opacity var(--transition-slow), transform var(--transition-slow), text-shadow var(--transition-slow);
+      pointer-events: none;
+    }
+    .theme-sun {
+      color: #facc15;
+      text-shadow: 0 0 6px rgba(250, 204, 21, 0.9);
+    }
+    .theme-moon {
+      color: #38bdf8;
+      text-shadow: 0 0 6px rgba(56, 189, 248, 0.9);
+    }
+    :root.dark .theme-sun {
+      opacity: 0.28;
+      text-shadow: none;
+      transform: scale(0.9);
+    }
+    :root.dark .theme-moon {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    :root:not(.dark) .theme-sun {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    :root:not(.dark) .theme-moon {
+      opacity: 0.28;
+      text-shadow: none;
+      transform: scale(0.9);
+    }
+
+    .nav-toggle {
+      display: none;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      border-radius: 999px;
+      background: var(--text);
+      margin: 4px 0;
+      transition: transform 180ms ease-out, opacity 180ms ease-out;
+    }
+    .nav-mobile-open .nav-toggle span:nth-child(1) {
+      transform: translateY(6px) rotate(45deg);
+    }
+    .nav-mobile-open .nav-toggle span:nth-child(2) {
+      opacity: 0;
+    }
+    .nav-mobile-open .nav-toggle span:nth-child(3) {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    @media (max-width: 820px) {
+      nav ul {
+        position: absolute;
+        top: var(--nav-height);
+        left: 0;
+        right: 0;
+        background: var(--bg-alt);
+        border-bottom: 1px solid var(--border-subtle);
+        flex-direction: column;
+        padding: 0.75rem 1.5rem 1.5rem;
+        transform-origin: top;
+        transform: scaleY(0.7);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity var(--transition-fast), transform var(--transition-fast);
+      }
+      :root.dark nav ul {
+        background: #020617;
+      }
+      .nav-mobile-open nav ul {
+        opacity: 1;
+        transform: scaleY(1);
+        pointer-events: auto;
+      }
+      .nav-links {
+        gap: 0.75rem;
+      }
+      .nav-toggle {
+        display: inline-flex;
+      }
+      .nav-cta {
+        display: none;
+      }
+    }
+
+    /* HERO */
+    .hero {
+      padding: 5rem 0 4rem;
+    }
+    @media (max-width: 768px) {
+      .hero {
+        padding-top: 3.5rem;
+      }
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 3rem;
+      align-items: center;
+    }
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.25rem 0.9rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+      margin-bottom: 1.1rem;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+    }
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #fefce8 0, #f97316 40%, #b91c1c 100%);
+      box-shadow: 0 0 0 4px rgba(251, 146, 60, 0.25);
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.6rem, 4vw, 3.4rem);
+      line-height: 1.05;
+      letter-spacing: 0.02em;
+      margin-bottom: 1rem;
+    }
+    .hero-gradient {
+      background: linear-gradient(120deg, var(--accent-strong), #ec4899, #6366f1);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .hero p {
+      font-size: 0.98rem;
+      color: var(--muted);
+      max-width: 32rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 1.5rem;
+    }
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .tick {
+      width: 16px;
+      height: 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(22, 163, 74, 0.4);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 280px;
+    }
+    .hero-main-card {
+      position: relative;
+      padding: 1.4rem;
+      border-radius: 30px;
+      background: radial-gradient(circle at 0 0, rgba(255, 255, 255, 0.9) 0, transparent 55%),
+                  radial-gradient(circle at 100% 0, rgba(248, 250, 252, 0.85) 0, transparent 55%),
+                  rgba(15,23,42,0.96);
+      box-shadow:
+        0 16px 40px rgba(15, 23, 42, 0.7),
+        0 0 0 1px rgba(148, 163, 184, 0.35);
+      color: white;
+      overflow: hidden;
+    }
+    .hero-main-inner {
+      border-radius: 22px;
+      padding: 1.2rem 1rem 1rem;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(251, 191, 36, 0.28) 0, transparent 55%),
+        radial-gradient(circle at 110% 10%, rgba(248, 113, 113, 0.36) 0, transparent 45%),
+        radial-gradient(circle at 50% 100%, rgba(129, 140, 248, 0.5) 0, transparent 55%),
+        rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+    }
+
+    .hero-main-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+      gap: 1rem;
+    }
+    .hero-main-header h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .hero-tag {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      padding: 0.2rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid rgba(248, 250, 252, 0.35);
+      background: rgba(15, 23, 42, 0.85);
+    }
+    .hero-photo-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.4rem;
+      margin-bottom: 1rem;
+    }
+    .hero-photo {
+      height: 70px;
+      border-radius: 1rem;
+      overflow: hidden;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      transform-origin: center;
+      transition: transform 260ms ease-out, box-shadow 260ms ease-out, filter 260ms ease-out;
+      background-color: #111827;
+    }
+    .hero-photo:nth-child(1) {
+      background-image: url("https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=600");
+    }
+    .hero-photo:nth-child(2) {
+      background-image: url("https://images.pexels.com/photos/6135970/pexels-photo-6135970.jpeg?auto=compress&cs=tinysrgb&w=600");
+    }
+    .hero-photo:nth-child(3) {
+      background-image: url("https://images.pexels.com/photos/6747206/pexels-photo-6747206.jpeg?auto=compress&cs=tinysrgb&w=600");
+    }
+    .hero-photo::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 10% 0%, rgba(15,23,42,0.1) 0, transparent 45%),
+                  linear-gradient(to top, rgba(15,23,42,0.65), transparent 55%);
+    }
+    .hero-photo:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 0 20px rgba(251, 191, 36, 0.9);
+      filter: brightness(1.06);
+    }
+
+    .hero-main-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+      color: #e5e7eb;
+    }
+    .hero-main-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .pill {
+      padding: 0.22rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.75);
+    }
+
+    .hero-stats-card {
+      position: absolute;
+      right: -5px;
+      bottom: -10px;
+      width: 210px;
+      padding: 0.7rem 0.9rem;
+      border-radius: 18px;
+      background: rgba(15, 23, 42, 0.98);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+      color: #e5e7eb;
+      font-size: 0.78rem;
+    }
+    .hero-stats-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 8px #22c55e;
+    }
+    .hero-stat-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.2rem;
+    }
+    .hero-progress {
+      margin-top: 0.4rem;
+      height: 4px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.5);
+      overflow: hidden;
+      position: relative;
+    }
+    .hero-progress-bar {
+      width: 82%;
+      height: 100%;
+      background: linear-gradient(90deg, #22c55e, #facc15);
+    }
+
+    .floating-chip {
+      position: absolute;
+      left: -18px;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 0.5rem 0.9rem;
+      border-radius: 999px;
+      background: rgba(248, 250, 252, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.4);
+      font-size: 0.72rem;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .floating-chip-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #fef9c3 0, #f97316 45%, #b91c1c 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 0.7rem;
+      box-shadow: 0 0 0 4px rgba(251, 146, 60, 0.35);
+    }
+
+    @media (max-width: 900px) {
+      .hero-visual {
+        order: -1;
+      }
+      .floating-chip {
+        left: auto;
+        right: -18px;
+      }
+    }
+    @media (max-width: 540px) {
+      .hero-main-card {
+        transform: scale(0.98);
+      }
+      .floating-chip {
+        display: none;
+      }
+      .hero-stats-card {
+        right: 4px;
+      }
+    }
+
+    /* Sections */
+    section {
+      padding: 4rem 0;
+    }
+    .section-header {
+      max-width: 640px;
+      margin-bottom: 2rem;
+    }
+    .section-label {
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.9rem;
+      margin-bottom: 0.4rem;
+    }
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.6rem;
+    }
+    @media (max-width: 900px) {
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 640px) {
+      .services-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+    .service-card {
+      position: relative;
+      padding: 1.4rem 1.2rem;
+      overflow: hidden;
+      cursor: pointer;
+      transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        border var(--transition-fast),
+        background var(--transition-fast),
+        filter var(--transition-fast);
+    }
+    .service-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 0 0, rgba(251, 191, 36, 0.22) 0, transparent 55%),
+                  radial-gradient(circle at 80% 100%, rgba(147, 51, 234, 0.26) 0, transparent 55%);
+      opacity: 0;
+      transition: opacity var(--transition-fast);
+      pointer-events: none;
+    }
+    .service-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow:
+        var(--shadow-soft),
+        0 0 22px rgba(184, 107, 255, 0.7);
+      border-color: rgba(148, 27, 195, 0.4);
+      background: radial-gradient(circle at 0 0, rgba(251, 191, 36, 0.03) 0, transparent 60%),
+                  var(--card);
+      filter: brightness(1.03);
+    }
+    .service-card:hover::before {
+      opacity: 0.9;
+    }
+    .service-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 14px;
+      background: var(--accent-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.9rem;
+      font-size: 1rem;
+    }
+    .service-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      font-size: 0.98rem;
+    }
+    .service-text {
+      font-size: 0.84rem;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+    }
+    .service-meta {
+      font-size: 0.75rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Destinations */
+    .destinations-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1.4rem;
+    }
+    .chip-filter {
+      padding: 0.25rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      font-size: 0.78rem;
+      cursor: pointer;
+      background: rgba(15,23,42,0.02);
+      transition:
+        background var(--transition-fast),
+        color var(--transition-fast),
+        border var(--transition-fast),
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast);
+    }
+    .chip-filter:hover {
+      box-shadow: 0 0 14px rgba(184, 107, 255, 0.65);
+      transform: translateY(-1px);
+    }
+    .chip-filter.active {
+      background: linear-gradient(120deg, var(--accent), var(--accent-strong));
+      border-color: transparent;
+      color: white;
+      transform: translateY(-1px);
+      box-shadow: 0 0 18px rgba(148, 27, 195, 0.85);
+    }
+
+    .destinations-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.6rem;
+    }
+    @media (max-width: 900px) {
+      .destinations-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 640px) {
+      .destinations-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+    .destination-card {
+      border-radius: 22px;
+      overflow: hidden;
+      background: var(--bg-alt);
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+      position: relative;
+      transform-origin: center;
+      cursor: pointer;
+      transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        border var(--transition-fast),
+        background var(--transition-fast),
+        filter var(--transition-fast);
+    }
+    .destination-photo {
+      height: 170px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      background-color: #111827;
+    }
+    .destination-photo::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(15, 23, 42, 0.7), transparent 55%);
+    }
+    .destination-chip {
+      position: absolute;
+      left: 12px;
+      bottom: 12px;
+      padding: 0.2rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      color: #e5e7eb;
+      font-size: 0.7rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .destination-body {
+      padding: 0.9rem 1rem 1rem;
+      font-size: 0.85rem;
+    }
+    .destination-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 0.4rem;
+    }
+    .destination-card:hover {
+      transform: translateY(-8px) scale(1.01);
+      border-color: rgba(148, 27, 195, 0.9);
+      box-shadow:
+        var(--shadow-soft),
+        0 0 28px rgba(184, 107, 255, 0.95);
+      background: radial-gradient(circle at 0 0, rgba(251, 191, 36, 0.08) 0, transparent 60%),
+                  var(--card);
+      filter: brightness(1.04);
+    }
+
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 2fr 1.2fr;
+      gap: 1.4rem;
+    }
+    @media (max-width: 900px) {
+      .gallery-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+    .gallery-main {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .gallery-item {
+      border-radius: 22px;
+      overflow: hidden;
+      position: relative;
+      height: 180px;
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+      transform-origin: center;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), filter var(--transition-fast);
+      background-color: #111827;
+    }
+    .gallery-item.large {
+      grid-column: span 2;
+      height: 260px;
+    }
+    .gallery-item::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(15,23,42,0.7), transparent 60%);
+    }
+    .gallery-item:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow:
+        var(--shadow-soft),
+        0 0 26px rgba(184, 107, 255, 0.9);
+      filter: brightness(1.06);
+    }
+    .gallery-caption {
+      position: absolute;
+      left: 14px;
+      bottom: 12px;
+      color: #f9fafb;
+      font-size: 0.8rem;
+    }
+    .gallery-caption strong {
+      display: block;
+      font-size: 0.92rem;
+      margin-bottom: 0.1rem;
+    }
+
+    .testimonials {
+      padding: 1.4rem;
+    }
+    .testimonial {
+      padding: 1rem 1.1rem;
+      border-radius: 18px;
+      border: 1px solid var(--border-subtle);
+      background: linear-gradient(135deg, rgba(248, 250, 252, 0.92), rgba(241, 245, 249, 0.95));
+      font-size: 0.82rem;
+      margin-bottom: 0.9rem;
+      position: relative;
+    }
+    :root.dark .testimonial {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.98));
+    }
+    .testimonial:last-child { margin-bottom: 0; }
+    .testimonial::before {
+      content: "“";
+      position: absolute;
+      left: 12px;
+      top: 4px;
+      font-size: 2rem;
+      opacity: 0.25;
+    }
+    .testimonial-meta {
+      margin-top: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* Contact */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 2rem;
+      align-items: stretch;
+    }
+    @media (max-width: 900px) {
+      .contact-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .contact-form {
+      padding: 1.4rem 1.4rem 1.6rem;
+    }
+    .contact-form-row {
+      display: flex;
+      gap: 1rem;
+    }
+    @media (max-width: 640px) {
+      .contact-form-row {
+        flex-direction: column;
+      }
+    }
+    .field {
+      margin-bottom: 1rem;
+      flex: 1;
+    }
+    label {
+      display: block;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.35rem;
+    }
+    input, select, textarea {
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      padding: 0.7rem 0.8rem;
+      font-size: 0.9rem;
+      background: rgba(248, 250, 252, 0.9);
+      outline: none;
+      transition: border var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
+    }
+    :root.dark input,
+    :root.dark select,
+    :root.dark textarea {
+      background: rgba(15, 23, 42, 0.96);
+      color: #e5e7eb;
+      border-color: rgba(148, 163, 184, 0.7);
+    }
+    input::placeholder,
+    textarea::placeholder {
+      color: rgba(148, 163, 184, 0.9);
+    }
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(129, 140, 248, 0.7), 0 14px 30px rgba(129, 140, 248, 0.35);
+      transform: translateY(-1px);
+      background: var(--bg-alt);
+    }
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    .hint {
+      font-size: 0.76rem;
+      color: var(--muted);
+      margin-top: 0.25rem;
+    }
+
+    .contact-sidebar {
+      padding: 1.4rem 1.4rem 1.6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.4rem;
+    }
+    .contact-block {
+      padding: 0.9rem 1rem;
+      border-radius: 18px;
+      border: 1px dashed rgba(148, 163, 184, 0.65);
+      background: radial-gradient(circle at 0 0, rgba(251, 191, 36, 0.15) 0, transparent 55%),
+                  radial-gradient(circle at 100% 100%, rgba(79, 70, 229, 0.25) 0, transparent 55%),
+                  rgba(15, 23, 42, 0.98);
+      color: #e5e7eb;
+      font-size: 0.82rem;
+    }
+    .contact-block h4 {
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+    }
+    .contact-block strong {
+      display: block;
+      margin-top: 0.2rem;
+    }
+
+    .badge-inline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.65);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    footer {
+      padding: 2rem 0 2.6rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+      border-top: 1px solid rgba(148, 163, 184, 0.24);
+      margin-top: 1rem;
+    }
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .footer-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* Scroll animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 600ms cubic-bezier(0.16, 1, 0.3, 1), transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 {
+      transition-delay: 80ms;
+    }
+    .reveal-delay-2 {
+      transition-delay: 160ms;
+    }
+    .reveal-delay-3 {
+      transition-delay: 240ms;
+    }
+
+    .text-accent {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div>
+          <div class="brand-name">Code Non IT Weddings</div>
+          <div class="brand-tagline">Luxury Indian Weddings</div>
+        </div>
+      </div>
+
+      <div class="nav-links">
+        <nav>
+          <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#gallery">Experiences</a></li>
+            <li><a href="#contact">Enquire</a></li>
+          </ul>
+        </nav>
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-toggle-icon theme-sun">☀</span>
+          <span class="theme-toggle-icon theme-moon">☾</span>
+          <div class="theme-toggle-knob"></div>
+        </button>
+        <div class="nav-cta">
+          <a href="#contact" class="btn btn-ghost">Download Brochure</a>
+          <a href="#contact" class="btn btn-primary">Plan Your Wedding</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="reveal reveal-delay-1">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            Bespoke destination weddings across India
+          </div>
+          <h1>
+            We design weddings that feel
+            <span class="hero-gradient">like cinema.</span>
+          </h1>
+          <p>
+            From palaces in Rajasthan to the beaches of Goa and the backwaters of Kerala, we craft seamless, soulful celebrations for modern Indian couples &amp; their families.
+          </p>
+
+          <div style="display:flex; gap:0.9rem; flex-wrap:wrap;">
+            <a href="#contact" class="btn btn-primary">
+              Book a discovery call
+              <span>↗</span>
+            </a>
+            <a href="#destinations" class="btn btn-ghost">
+              Explore destinations
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <span><span class="tick">✓</span> 200+ weddings planned</span>
+            <span><span class="tick">✓</span> NRI &amp; cross-culture specialists</span>
+            <span><span class="tick">✓</span> On-ground teams across India</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal reveal-delay-2">
+          <div class="hero-main-card">
+            <div class="hero-main-inner">
+              <div class="hero-main-header">
+                <div>
+                  <h2>Destination Curation</h2>
+                  <div style="font-size:0.8rem; opacity:0.85;">
+                    Udaipur • Jaipur • Goa • Kerala • Mussoorie
+                  </div>
+                </div>
+                <span class="hero-tag">2025-26 calendar</span>
+              </div>
+
+              <div class="hero-photo-row">
+                <div class="hero-photo"></div>
+                <div class="hero-photo"></div>
+                <div class="hero-photo"></div>
+              </div>
+
+              <div class="hero-main-footer">
+                <div class="hero-main-pills">
+                  <span class="pill">Full-service planning</span>
+                  <span class="pill">Design &amp; décor</span>
+                  <span class="pill">Guest experience</span>
+                </div>
+                <div style="text-align:right;">
+                  <div style="font-size:0.7rem; text-transform:uppercase; letter-spacing:0.16em;">Next available</div>
+                  <strong style="font-size:0.9rem;">Nov ‘25 onwards</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="floating-chip">
+              <div class="floating-chip-icon">★</div>
+              4.9/5 rating from couples &amp; parents
+            </div>
+
+            <div class="hero-stats-card">
+              <div class="hero-stats-heading">
+                <span style="display:flex; align-items:center; gap:0.35rem;">
+                  <span class="status-dot"></span>
+                  Enquiry board
+                </span>
+                <span style="font-size:0.72rem; opacity:0.85;">Live</span>
+              </div>
+              <div class="hero-stat-row">
+                <span>2026 luxury slots</span>
+                <strong>7 / 12 booked</strong>
+              </div>
+              <div class="hero-progress">
+                <div class="hero-progress-bar"></div>
+              </div>
+              <div style="margin-top:0.35rem; display:flex; justify-content:space-between; font-size:0.72rem;">
+                <span>Priority for palace &amp; beach venues</span>
+                <span class="text-accent">Enquire now</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">What we handle</div>
+          <h2 class="section-title">End-to-end planning, with family-first warmth.</h2>
+          <p class="section-subtitle">
+            We manage every detail across design, logistics and hospitality so that you can be fully present in your own celebration.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="card service-card reveal reveal-delay-1">
+            <div class="service-icon">🎨</div>
+            <div class="service-title">Concept, décor &amp; production</div>
+            <p class="service-text">
+              Moodboards, 3D layouts, floral design, lighting &amp; technical production tailored to your story, culture and venue.
+            </p>
+            <div class="service-meta">
+              <span>Design directors on every event</span>
+              <span>→</span>
+            </div>
+          </article>
+
+          <article class="card service-card reveal reveal-delay-2">
+            <div class="service-icon">🕊️</div>
+            <div class="service-title">Rituals &amp; cultural curation</div>
+            <p class="service-text">
+              From pheras to nikah &amp; sangeet to mehfil, we work with priests and maestros who honour your traditions beautifully.
+            </p>
+            <div class="service-meta">
+              <span>Multi-faith expertise</span>
+              <span>→</span>
+            </div>
+          </article>
+
+          <article class="card service-card reveal reveal-delay-3">
+            <div class="service-icon">✈️</div>
+            <div class="service-title">Guest travel &amp; hospitality</div>
+            <p class="service-text">
+              Bulk room blocks, airport assistance, welcome hampers and concierge desks – we treat every guest like VIP family.
+            </p>
+            <div class="service-meta">
+              <span>Pan-India partnerships</span>
+              <span>→</span>
+            </div>
+          </article>
+
+          <article class="card service-card reveal reveal-delay-1">
+            <div class="service-icon">🎻</div>
+            <div class="service-title">Entertainment &amp; experiences</div>
+            <p class="service-text">
+              Celebrity artist bookings, baraat bands, choreographers, after-parties, haldi carnivals, yacht brunches and more.
+            </p>
+            <div class="service-meta">
+              <span>Verified artist network</span>
+              <span>→</span>
+            </div>
+          </article>
+
+          <article class="card service-card reveal reveal-delay-2">
+            <div class="service-icon">📜</div>
+            <div class="service-title">Budgeting &amp; vendor management</div>
+            <p class="service-text">
+              Transparent costing, contract negotiations and a vetted vendor ecosystem across décor, F&amp;B, photo &amp; video.
+            </p>
+            <div class="service-meta">
+              <span>Single point of contact</span>
+              <span>→</span>
+            </div>
+          </article>
+
+          <article class="card service-card reveal reveal-delay-3">
+            <div class="service-icon">📸</div>
+            <div class="service-title">Memories &amp; gifting</div>
+            <p class="service-text">
+              Bespoke save-the-date designs, invitation suites, wedding websites and thoughtful, locally sourced favours.
+            </p>
+            <div class="service-meta">
+              <span>For you &amp; your guests</span>
+              <span>→</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTINATIONS -->
+    <section id="destinations">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">Top destinations</div>
+          <h2 class="section-title">The most iconic wedding locations in India.</h2>
+          <p class="section-subtitle">
+            Curated palaces, beaches, mountains and heritage venues across the country – with specialisation in logistics, licenses and local culture.
+          </p>
+        </div>
+
+        <div class="destinations-filters reveal reveal-delay-1">
+          <button class="chip-filter active" data-filter="all">All</button>
+          <button class="chip-filter" data-filter="palace">Palaces &amp; heritage</button>
+          <button class="chip-filter" data-filter="beach">Beaches</button>
+          <button class="chip-filter" data-filter="mountain">Mountains &amp; forests</button>
+          <button class="chip-filter" data-filter="city">Urban luxury</button>
+        </div>
+
+        <div class="destinations-grid">
+          <!-- Palaces -->
+          <article class="destination-card reveal" data-category="palace">
+            <div class="destination-photo" style="background-image:url('https://images.pexels.com/photos/4606725/pexels-photo-4606725.jpeg?auto=compress&cs=tinysrgb&w=600');">
+              <div class="destination-chip">Udaipur · Palace weddings</div>
+            </div>
+            <div class="destination-body">
+              <strong>Udaipur, Rajasthan</strong>
+              <p>
+                Taj Lake Palace, City Palace, Leela Palace &amp; boutique havelis framed by Lake Pichola – for cinematic baraats and royal pheras.
+              </p>
+              <div class="destination-meta">
+                <span>Best: Oct–Mar</span>
+                <span>Guests: 80–500</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="destination-card reveal reveal-delay-1" data-category="palace">
+            <div class="destination-photo" style="background-image:url('https://images.pexels.com/photos/1756733/pexels-photo-1756733.jpeg?auto=compress&cs=tinysrgb&w=600');">
+              <div class="destination-chip">Jaipur · Pink City</div>
+            </div>
+            <div class="destination-body">
+              <strong>Jaipur, Rajasthan</strong>
+              <p>
+                Rambagh Palace, Fairmont, Leela &amp; heritage forts with elephant baraats, shehnai and impeccable royal hospitality.
+              </p>
+              <div class="destination-meta">
+                <span>Best: Nov–Feb</span>
+                <span>Guests: 150–800</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="destination-card reveal reveal-delay-2" data-category="palace">
+            <div class="destination-photo" style="background-image:url('https://images.pexels.com/photos/167404/pexels-photo-167404.jpeg?auto=compress&cs=tinysrgb&w=600');">
+              <div class="destination-chip">Jodhpur · Blue City</div>
+            </div>
+            <div class="destination-body">
+              <strong>Jodhpur &amp; Jaisalmer</strong>
+              <p>
+                Desert sunsets, Mehrangarh views and sand-dune sangeets in Jaisalmer – perfect for royal yet intimate celebrations.
+              </p>
+              <div class="destination-meta">
+                <span>Best: Oct–Mar</span>
+                <span>Guests: 80–400</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Beach -->
+          <article class="destination-card reveal" data-category="beach">
+            <div class="destination-photo" style="background-image:url('https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=600');">
+              <div class="destination-chip">Goa · Beach mandaps</div>
+            </div>
+            <div class="destination-body">
+              <strong>Goa</strong>
+              <p>
+                Luxury beach resorts in North &amp; South Goa for sunset pheras, pool brunches and all-night after-parties by the sea.
+              </p>
+              <div class="destination-meta">
+                <span>Best: Nov–Feb</span>
+                <span>Guests: 100–400</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="destination-card reveal reveal-delay-1" data-category="beach">
+            <div class="destination-photo" style="background-image:url('https://images.pexels.com/photos/210205/pexels-photo-210205.jpeg?auto=compress&cs=tinysrgb&w=600');">
+              <div class="destination-chip">Kerala · Backwaters</div>
+            </div>
+            <div class="destination-body">
+              <strong>Kerala – Kovalam &amp; Backwaters</strong>
+              <p>
+                Cliffside mandaps in Kovalam, houseboat haldi cruises &amp; serene ceremonies on the lush backwaters.
+              </p>
+              <div class="destination-meta">
+                <span>Best: Nov–Mar</span>
+                <span>Guests: 80–250</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="destination-card reveal reveal-delay-2" data-category="beach">
+            <div class="destination-photo" style="background-image:url('https://images.pexels.com/photos/1456291/pexels-photo-1456291.jpeg?auto=compress&cs=tinysrgb&w=600');">
+              <div class="destination-chip">Andaman · Islands</div>
+            </div>
+            <div class="destination-body">
+              <strong>Andaman &amp; Nicobar Islands</strong>
+              <p>
+                White-sand beaches, turquoise water and intimate island resorts ideal for smaller, ultra-luxury gatherings.
+              </p>
+              <div class="destination-meta">
+                <span>Best: Nov–Apr</span>
+                <span>Guests: 50–150</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Mountains -->
+          <article class="destination-card reveal" data-category="mountain">
+            <div class="destination-photo" style="background-image:url('https://images.pexels.com/photos/12944127/pexels-photo-12944127.jpeg?auto=compress&cs=tinysrgb&w=600');">
+              <div class="destination-chip">Mussoorie · Queen of Hills</div>
+            </div>
+            <div class="destination-body">
+              <strong>Mussoorie &amp; Dehradun</strong>
+              <p>
+                Mountain-view lawns, walnut groves and cosy winter pheras framed by pine forests and the Garhwal Himalayas.
+              </p>
+              <div class="destination-meta">
+                <span>Best: Mar–Jun &amp; Oct</span>
+                <span>Guests: 80–300</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="destination-card reveal reveal-delay-1" data-category="mountain">
+            <div class="destination-photo" style="background-image:url('https://images.pexels.com/photos/1732274/pexels-photo-1732274.jpeg?auto=compress&cs=tinysrgb&w=600');">
+              <div class="destination-chip">Shimla · Cedar hills</div>
+            </div>
+            <div class="destination-body">
+              <strong>Shimla &amp; Himachal</strong>
+              <p>
+                Cedar forests, snow-kissed ridges and boutique mountain retreats ideal for cosy, picturesque celebrations.
+              </p>
+              <div class="destination-meta">
+                <span>Best: Apr–Jun &amp; Oct</span>
+                <span>Guests: 80–250</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="destination-card reveal reveal-delay-2" data-category="mountain">
+            <div class="destination-photo" style="background-image:url('https://images.pexels.com/photos/248062/pexels-photo-248062.jpeg?auto=compress&cs=tinysrgb&w=600');">
+              <div class="destination-chip">Coorg · Coffee estates</div>
+            </div>
+            <div class="destination-body">
+              <strong>Coorg &amp; Kabini</strong>
+              <p>
+                Misty coffee plantations and riverfront lodges in Karnataka for earthy, nature-immersed celebrations.
+              </p>
+              <div class="destination-meta">
+                <span>Best: Oct–Mar</span>
+                <span>Guests: 80–200</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- City luxury -->
+          <article class="destination-card reveal" data-category="city">
+            <div class="destination-photo" style="background-image:url('https://images.pexels.com/photos/762504/pexels-photo-762504.jpeg?auto=compress&cs=tinysrgb&w=600');">
+              <div class="destination-chip">Mumbai · Sea views</div>
+            </div>
+            <div class="destination-body">
+              <strong>Mumbai</strong>
+              <p>
+                Five-star ballrooms and sea-facing terraces in South &amp; North Mumbai – perfect for ultra-chic city weddings.
+              </p>
+              <div class="destination-meta">
+                <span>Best: Oct–Apr</span>
+                <span>Guests: 150–800</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="destination-card reveal reveal-delay-1" data-category="city">
+            <div class="destination-photo" style="background-image:url('https://images.pexels.com/photos/461950/pexels-photo-461950.jpeg?auto=compress&cs=tinysrgb&w=600');">
+              <div class="destination-chip">Delhi · Grand ballrooms</div>
+            </div>
+            <div class="destination-body">
+              <strong>Delhi NCR</strong>
+              <p>
+                Farmhouses, luxury hotels and resort clusters in Gurugram &amp; Aerocity with easy access for North Indian families.
+              </p>
+              <div class="destination-meta">
+                <span>Best: Oct–Mar</span>
+                <span>Guests: 200–1200</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="destination-card reveal reveal-delay-2" data-category="city">
+            <div class="destination-photo" style="background-image:url('https://images.pexels.com/photos/5185430/pexels-photo-5185430.jpeg?auto=compress&cs=tinysrgb&w=600');">
+              <div class="destination-chip">Hyderabad · Nizami palaces</div>
+            </div>
+            <div class="destination-body">
+              <strong>Hyderabad</strong>
+              <p>
+                Taj Falaknuma Palace &amp; city venues bringing Nizami grandeur together with modern comfort and service.
+              </p>
+              <div class="destination-meta">
+                <span>Best: Oct–Feb</span>
+                <span>Guests: 150–500</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY / EXPERIENCES -->
+    <section id="gallery">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">Experiences</div>
+          <h2 class="section-title">Stories we’ve brought to life.</h2>
+          <p class="section-subtitle">
+            A small peek into the textures, colours and emotions our teams design. Ask us for a private portfolio to see full weddings.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-main">
+            <figure class="gallery-item large reveal" style="background-image:url('https://images.pexels.com/photos/1114000/pexels-photo-1114000.jpeg?auto=compress&cs=tinysrgb&w=600');">
+              <figcaption class="gallery-caption">
+                <strong>Sunset pheras in Goa</strong>
+                Tuscan-inspired mandap with Indian marigold palette.
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item reveal reveal-delay-1" style="background-image:url('https://images.pexels.com/photos/2341830/pexels-photo-2341830.jpeg?auto=compress&cs=tinysrgb&w=600');">
+              <figcaption class="gallery-caption">
+                <strong>Udaipur sangeet</strong>
+                Palace courtyard turned into a concert arena.
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item reveal reveal-delay-2" style="background-image:url('https://images.pexels.com/photos/6130471/pexels-photo-6130471.jpeg?auto=compress&cs=tinysrgb&w=600');">
+              <figcaption class="gallery-caption">
+                <strong>Mehendi in the hills</strong>
+                Pastel florals against Mussoorie’s misty greens.
+              </figcaption>
+            </figure>
+          </div>
+
+          <aside class="card testimonials reveal reveal-delay-1">
+            <div class="section-label" style="margin-bottom:0.4rem;">Voices from our couples</div>
+
+            <div class="testimonial">
+              My parents still talk about how “sorted” everything felt. From the baraat in Jaipur to our beach after-party in Goa, the team handled 350 guests like family.
+              <div class="testimonial-meta">
+                <span><strong>Aanya &amp; Kabir</strong> · Jaipur &amp; Goa</span>
+                <span>Multi-city wedding</span>
+              </div>
+            </div>
+
+            <div class="testimonial">
+              Being NRI, we were nervous about planning remotely. The Code Non IT Weddings team gave us weekly updates, budget trackers and handled every little drama with grace.
+              <div class="testimonial-meta">
+                <span><strong>Rhea &amp; Arjun</strong> · Udaipur</span>
+                <span>US-India planning</span>
+              </div>
+            </div>
+
+            <div class="testimonial">
+              What stood out most was how cared-for our guests felt – airport notes in Konkani &amp; Hindi, curated tours and dietary-specific menus for each event.
+              <div class="testimonial-meta">
+                <span><strong>Zoya &amp; Sameer</strong> · Kerala</span>
+                <span>150-guest intimate</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">Start planning</div>
+          <h2 class="section-title">Tell us a little about your celebration.</h2>
+          <p class="section-subtitle">
+            Share your details and our lead planner will call you within 24 hours with a curated game-plan and a rough budget range.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          <form class="card contact-form reveal" id="enquiryForm">
+            <div class="contact-form-row">
+              <div class="field">
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" required placeholder="Bride / Groom / Family representative" />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required placeholder="you@example.com" />
+              </div>
+            </div>
+
+            <div class="contact-form-row">
+              <div class="field">
+                <label for="phone">WhatsApp number</label>
+                <input id="phone" name="phone" type="tel" required placeholder="+91-" />
+                <div class="hint">We’ll only use this for wedding-related communication.</div>
+              </div>
+              <div class="field">
+                <label for="city">Current city</label>
+                <input id="city" name="city" type="text" placeholder="Mumbai / Dubai / London…" />
+              </div>
+            </div>
+
+            <div class="contact-form-row">
+              <div class="field">
+                <label for="location">Preferred wedding location</label>
+                <select id="location" name="location">
+                  <option value="">Select a destination</option>
+                  <option>Udaipur</option>
+                  <option>Jaipur</option>
+                  <option>Jodhpur / Jaisalmer</option>
+                  <option>Goa</option>
+                  <option>Kerala – Kovalam / Backwaters</option>
+                  <option>Andaman &amp; Nicobar</option>
+                  <option>Mussoorie / Dehradun</option>
+                  <option>Shimla / Himachal</option>
+                  <option>Coorg / Kabini</option>
+                  <option>Mumbai</option>
+                  <option>Delhi NCR</option>
+                  <option>Hyderabad</option>
+                  <option>Open to suggestions</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="guests">Approx. guest count</label>
+                <select id="guests" name="guests">
+                  <option value="">Select</option>
+                  <option>Up to 80 guests (intimate)</option>
+                  <option>80–150 guests</option>
+                  <option>150–300 guests</option>
+                  <option>300–600 guests</option>
+                  <option>600+ guests</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="dates">Preferred month / dates</label>
+              <input id="dates" name="dates" type="text" placeholder="e.g. 14–16 Feb 2026, flexible by 1 week" />
+            </div>
+
+            <div class="field">
+              <label for="message">Tell us about your dream wedding</label>
+              <textarea id="message" name="message" placeholder="Share your vision, rituals, any must-haves or special requests."></textarea>
+            </div>
+
+            <div class="field">
+              <label>
+                <input type="checkbox" id="brochure" name="brochure" style="width:auto; margin-right:0.4rem;" />
+                Email me your detailed services &amp; sample budgets.
+              </label>
+            </div>
+
+            <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:0.75rem; margin-top:0.5rem;">
+              <button type="submit" class="btn btn-primary">
+                Submit enquiry
+                <span>⟶</span>
+              </button>
+              <div class="hint" id="formStatus">We typically respond within 24 hours (faster on weekdays).</div>
+            </div>
+          </form>
+
+          <aside class="card contact-sidebar reveal reveal-delay-2">
+            <div class="contact-block">
+              <h4>How your enquiry reaches us</h4>
+              <p>
+                As soon as you submit this form, our system securely sends your details
+                to our core team by email and logs it in our planning dashboard.
+              </p>
+              <p>
+                <strong>Owner notifications</strong>
+                – The founder receives an instant email &amp; app notification so no genuine enquiry is ever missed.
+              </p>
+              <p>
+                <span class="badge-inline" style="margin-top:0.4rem;">Data secure</span>
+              </p>
+            </div>
+
+            <div>
+              <div style="font-size:0.86rem; margin-bottom:0.4rem;">Or connect directly</div>
+              <p style="font-size:0.86rem; margin-bottom:0.2rem;">
+                📞 India: <strong>+91-98765-43210</strong>
+              </p>
+              <p style="font-size:0.86rem; margin-bottom:0.2rem;">
+                🌍 WhatsApp (NRI): <strong>+91-98765-43211</strong>
+              </p>
+              <p style="font-size:0.86rem;">
+                ✉️ Email: <strong>hello@codenonitweddings.in</strong>
+              </p>
+              <p class="hint" style="margin-top:0.6rem;">
+                Video consultations available for couples &amp; parents across time zones.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-row">
+      <div>
+        © <span id="year"></span> Code Non IT Weddings · Crafted with love in India.
+      </div>
+      <div class="footer-links">
+        <a href="#hero">Back to top ↑</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#contact">Enquire</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Theme handling with localStorage
+    (function () {
+      const root = document.documentElement;
+      const toggle = document.querySelector(".theme-toggle");
+
+      function setTheme(isDark) {
+        if (isDark) {
+          root.classList.add("dark");
+          localStorage.setItem("cniw-theme", "dark");
+        } else {
+          root.classList.remove("dark");
+          localStorage.setItem("cniw-theme", "light");
+        }
+      }
+
+      const savedTheme = localStorage.getItem("cniw-theme");
+      if (savedTheme === "dark" || (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        setTheme(true);
+      }
+
+      toggle.addEventListener("click", () => {
+        setTheme(!root.classList.contains("dark"));
+      });
+    })();
+
+    // Mobile nav toggle
+    (function () {
+      const header = document.querySelector("header");
+      const navToggle = document.querySelector(".nav-toggle");
+
+      navToggle.addEventListener("click", () => {
+        header.classList.toggle("nav-mobile-open");
+      });
+
+      document.querySelectorAll("nav a").forEach((link) => {
+        link.addEventListener("click", () => {
+          header.classList.remove("nav-mobile-open");
+        });
+      });
+    })();
+
+    // Scroll-in animations
+    (function () {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.18 }
+      );
+
+      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+    })();
+
+    // Destination filters
+    (function () {
+      const buttons = document.querySelectorAll(".chip-filter");
+      const cards = document.querySelectorAll(".destination-card");
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const filter = btn.dataset.filter;
+          buttons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          cards.forEach((card) => {
+            const category = card.dataset.category;
+            const show = filter === "all" || category === filter;
+            card.style.display = show ? "block" : "none";
+          });
+        });
+      });
+    })();
+
+    // Contact form submission (needs backend / service to really send email)
+    (function () {
+      const form = document.getElementById("enquiryForm");
+      const status = document.getElementById("formStatus");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        status.textContent = "Sending your enquiry…";
+
+        const formData = new FormData(form);
+        const payload = Object.fromEntries(formData.entries());
+
+        // Replace this URL with your real backend / Formspree / EmailJS endpoint
+        fetch("https://your-backend.example.com/api/send-enquiry-email", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        })
+          .then((res) => {
+            if (!res.ok) throw new Error("Network error");
+            status.textContent =
+              "Thank you! Your enquiry is with our founder. You’ll hear from us very soon.";
+            form.reset();
+          })
+          .catch(() => {
+            status.textContent =
+              "We couldn’t send this automatically. Please call / WhatsApp us directly – we’re on it.";
+          });
+      });
+    })();
+
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
