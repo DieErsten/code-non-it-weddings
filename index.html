@@ -744,23 +744,19 @@
     }
 
     /* Destinations */
-
     .destinations-filters {
       display: flex;
       flex-wrap: wrap;
       gap: 0.6rem;
       margin-bottom: 1.4rem;
     }
-
-    /* ✅ WHITE filter buttons */
     .chip-filter {
-      padding: 0.35rem 1rem;
+      padding: 0.25rem 0.9rem;
       border-radius: 999px;
       border: 1px solid rgba(148, 163, 184, 0.7);
       font-size: 0.78rem;
       cursor: pointer;
-      background: #ffffff;          /* white background */
-      color: var(--muted);
+      background: rgba(15,23,42,0.02);
       transition:
         background var(--transition-fast),
         color var(--transition-fast),
@@ -768,23 +764,16 @@
         transform var(--transition-fast),
         box-shadow var(--transition-fast);
     }
-    :root.dark .chip-filter {
-      background: #0b1120;          /* dark pill in dark mode */
-      color: #e5e7eb;
-    }
     .chip-filter:hover {
       box-shadow: 0 0 14px rgba(184, 107, 255, 0.65);
       transform: translateY(-1px);
     }
     .chip-filter.active {
-      background: #ffffff;          /* active also white */
-      color: var(--accent-strong);  /* accent text */
-      border-color: var(--accent-strong);
+      background: linear-gradient(120deg, var(--accent), var(--accent-strong));
+      border-color: transparent;
+      color: white;
       transform: translateY(-1px);
-      box-shadow: 0 0 18px rgba(184, 107, 255, 0.85);
-    }
-    :root.dark .chip-filter.active {
-      background: #020617;
+      box-shadow: 0 0 18px rgba(148, 27, 195, 0.85);
     }
 
     .destinations-grid {
@@ -1114,31 +1103,6 @@
 
     .text-accent {
       color: var(--accent);
-    }
-
-    /* ✅ Extra mobile friendliness */
-    @media (max-width: 640px) {
-      .container {
-        padding: 0 1.1rem;
-      }
-      section {
-        padding: 3rem 0;
-      }
-      .hero h1 {
-        font-size: 2.1rem;
-      }
-      .btn {
-        width: 100%;
-        justify-content: center;
-      }
-      .destinations-filters {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        padding-bottom: 0.4rem;
-      }
-      .destinations-filters::-webkit-scrollbar {
-        display: none;
-      }
     }
   </style>
 </head>
